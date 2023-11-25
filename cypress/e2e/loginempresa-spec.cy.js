@@ -16,12 +16,12 @@ describe('template spec', () => {
     cy.xpath('/html/body/app-root/div/app-banner/div/div/h1').should('exist');
     cy.xpath('/html/body/app-root/div/app-banner/div/div/h1').invoke('text').then((text) => {
       // Verificar que el texto contiene el nombre de la empresa esperado
-      const nombreDeLaEmpresaLogueada = 'empresa2';
+      const nombreDeLaEmpresaLogueada = 'empresa';
       expect(text.toLowerCase()).to.include(nombreDeLaEmpresaLogueada.toLowerCase());
     });
     cy.wait(1000)
 
-    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[8]').click();
+    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[9]').click();
     cy.wait(1000)
 
 

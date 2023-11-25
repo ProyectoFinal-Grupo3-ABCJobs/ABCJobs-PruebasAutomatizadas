@@ -23,9 +23,6 @@ describe('template spec', () => {
 
     cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[2]').click();
     cy.wait(1000)
-    
-
-    
 
 
     cy.xpath('/html/body/app-root/div/app-ver-proyectos/div/h2').should('exist');
@@ -37,7 +34,7 @@ describe('template spec', () => {
     cy.wait(1000)
 
 
-    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[8]').click();
+    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[9]').click();
     cy.wait(1000)
   })
 })
