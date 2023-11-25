@@ -21,10 +21,23 @@ describe('template spec', () => {
     });
     cy.wait(1000)
 
-    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[1]').click();
+    cy.xpath('//*[@id="navbarNavDropdown"]/ul/li[5]').click();
     cy.wait(1000)
+
+    cy.xpath('/html/body/app-root/div/app-ver-emparejamiento/div[1]/div/h3').should('exist');
+    cy.xpath('/html/body/app-root/div/app-ver-emparejamiento/div[1]/div/h3').invoke('text').then((text) => {
+      // Verificar que el texto contiene el título esperado
+      const titulo = 'Resumen de emparejamiento';
+      expect(text.toLowerCase()).to.include(titulo.toLowerCase());
+    });
+    cy.wait(1000)
+
+    cy.xpath('/html/body/app-root/div/app-ver-emparejamiento/div[2]/div[1]/ul').contains('Proyecto Ti2').click();
+    cy.wait(1000)
+
+    cy.xpath('/html/body/app-root/div/app-ver-emparejamiento/div[2]/div[2]/div/div/div/ul').should('exist');
+
       
-   
 
   })
 })
