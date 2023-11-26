@@ -53,7 +53,7 @@ describe('template spec', () => {
     cy.wait(1000)
 
     cy.xpath('/html/body/app-root/div/app-crear-ficha/div[3]/div/div/button[2]').click();
-    cy.wait(7000)
+    cy.wait(12000)
 
     cy.xpath('/html/body/app-root/div/app-menu-empresa/div/img').should('exist');
     cy.wait(1000)
